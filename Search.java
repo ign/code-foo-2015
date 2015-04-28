@@ -1,14 +1,10 @@
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 
 public class Search{
 //grid of letters.  Will fill with rows and columns after I find the dimensions
 		static char[][] grid;
+		static List<String> words = new ArrayList<String>();
 
 //MAIN//
 	public static void main(String[] args) throws FileNotFoundException, IOException{
@@ -25,6 +21,9 @@ public class Search{
 		Scanner numRows = new Scanner(wordsearch);
 		Scanner numLines = new Scanner(numCols.nextLine());
 
+	//Misc. Instantiations
+
+
 	//number of columns in the wordsearch
 		while(numLines.hasNext()){
 			numLines.next();
@@ -37,16 +36,20 @@ public class Search{
 		}
 		grid = new char[rows][cols];
 
-		System.out.println("Your word grid is " + cols + " by " + rows);
 		formWords(wordsToFind);
+		String words2[] = new String[words.size()];
+		words2 = words.toArray(words2);
+
+		System.out.println("Your word grid is " + cols + " by " + rows);
+		System.out.println(words2[23].charAt(0));
+
 	}
 
 
-//Copy the words from word file
+//Copy the words from word file into an ArrayList words
 	public static void formWords(File f) throws IOException { 
 		BufferedReader in = null;
         FileReader fr = null;
-        List<String> words = new ArrayList<String>();
 
         try {
             fr = new FileReader("words.txt");
@@ -61,6 +64,6 @@ public class Search{
             in.close();
             fr.close();
         }
-        for (String d : words) System.out.println(d);
+        //for (String d : words) System.out.println(d);
     } 
 }
