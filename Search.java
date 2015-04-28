@@ -8,6 +8,8 @@ public class Search{
 
 //MAIN//
 	public static void main(String[] args) throws FileNotFoundException, IOException{
+	
+	formWords(wordsToFind);
 	//rows and columns
 		int cols = 0;
 		int rows = 0;
@@ -36,7 +38,7 @@ public class Search{
 		}
 		grid = new char[rows][cols];
 
-		formWords(wordsToFind);
+	//Finally: this is where we find the words in the grid by looking first for the first letter
 		String words2[] = new String[words.size()];
 		words2 = words.toArray(words2);
 
