@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.awt.Point;
 
 public class Search{
 //grid of letters.  Will fill with rows and columns after I find the dimensions
@@ -9,11 +10,10 @@ public class Search{
 //MAIN//
 	public static void main(String[] args) throws FileNotFoundException, IOException{
 	
-	formWords(wordsToFind);
 	//rows and columns
 		int cols = 0;
 		int rows = 0;
-
+		boolean found = false;
 	//reference word-search.txt file that has the wordsearch board and the words to be found
 		File wordsearch = new File(System.getProperty("user.dir") + "/word-search.txt");
 		File wordsToFind = new File(System.getProperty("user.dir") + "/words.txt");
@@ -22,9 +22,6 @@ public class Search{
 		Scanner numCols = new Scanner(wordsearch);
 		Scanner numRows = new Scanner(wordsearch);
 		Scanner numLines = new Scanner(numCols.nextLine());
-
-	//Misc. Instantiations
-
 
 	//number of columns in the wordsearch
 		while(numLines.hasNext()){
@@ -38,17 +35,55 @@ public class Search{
 		}
 		grid = new char[rows][cols];
 
+		formWords(wordsToFind);
+		formGrid(wordsearch);
+
 	//Finally: this is where we find the words in the grid by looking first for the first letter
 		String words2[] = new String[words.size()];
 		words2 = words.toArray(words2);
 
 		System.out.println("Your word grid is " + cols + " by " + rows);
-		System.out.println(words2[23].charAt(0));
+		System.out.println(words2[0].charAt(0));
+
+
+for(int a=0; a < words2.length; a++){
+
+
+searchloop:		for(int i = 0 ; i < rows ; i++){
+				for(int j = 0 ; j < cols ; j++){
+					if(grid[i][j] == words2[a].charAt(0)){
+						Direction d = searchAround(i,j,words2[a]);
+						if(d != null){
+							found = true;
+							System.out.println(words2[a]+" found starting at ("+(i)+","+j+") going " + d);
+							break searchloop;	//found the word, so no need to continue looking
+						}	//remove this to find all occurences of word, instead of just first occurence
+					}
+				}//column iterator
+			}
+		}
 
 	}
 
 
-//Copy the words from word file into an ArrayList words
+//Copy the grid from wordsearch file into a 2d char array
+	public static void formGrid(File f) throws FileNotFoundException{
+		Scanner fileScanner = new Scanner(f);	
+		int i = 0;
+		int j = 0;
+		String line = fileScanner.nextLine();
+		while(!line.isEmpty()){
+			Scanner scanner = new Scanner(line);
+			while(scanner.hasNext()){
+				grid[i][j] = scanner.next().charAt(0);
+				j++;
+			}
+			j = 0;
+			i++;
+			line = fileScanner.nextLine();
+		}
+	}
+//Copy to words from the words.txt file into an array of words
 	public static void formWords(File f) throws IOException { 
 		BufferedReader in = null;
         FileReader fr = null;
@@ -68,4 +103,61 @@ public class Search{
         }
         //for (String d : words) System.out.println(d);
     } 
+///////////////////////////////////////	
+	public static boolean searchAhead(Point p, Direction d, String word){
+		int i = 1; 				//skip first char in word as we have already found a match 
+		char[] array = word.toCharArray();
+		while(i < array.length){
+			if(isValid(p) && array[i] == grid[p.x][p.y]){
+				p = d.fromPos(p.x,p.y);
+				i++;
+			}
+			else
+				return false; 	//mismatch in chars, word not found
+		}
+		return true; 			//no mismatches and traversed full word, so word found
+	}
+/////////////////////////////////////////
+	public static Direction searchAround(int x, int y, String word){
+		for(Direction dir : Direction.values()){
+			if(searchAhead(dir.fromPos(x,y), dir, word))
+				return dir;
+		}
+
+		return null; //no match found
+		
+	}
+//////////////////////////////////////////	
+	public static boolean isValid(Point p){
+		return p.x >= 0 && p.x < grid.length && p.y >= 0 && p.y < grid[0].length;
+	}
+//////////////////////////////////////////
+	public enum Direction {
+	NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST;
+
+	//Generates new point in accordance to what direction you are going
+	public Point fromPos(int x, int y) {
+		switch (this) {
+		case NORTH:
+			return new Point(x - 1, y);
+		case SOUTH:
+			return new Point(x + 1, y);
+		case WEST:
+			return new Point(x, y - 1);
+		case NORTHEAST:
+			return new Point(x - 1, y + 1);
+		case NORTHWEST:
+			return new Point(x - 1, y - 1);
+		case SOUTHEAST:
+			return new Point(x + 1, y + 1);
+		case SOUTHWEST:
+			return new Point(x + 1, y - 1);
+		default:
+			return new Point(x, y + 1);
+		}
+	}
+
+    }
+
+
 }
