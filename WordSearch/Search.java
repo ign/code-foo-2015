@@ -2,9 +2,6 @@ import java.util.*;
 import java.io.*;
 import java.awt.Point;
 
-/*Needs to have two separate files.  One with words to look for, and one with the grid.  There does need to be a space between letters in the grid, 
-but there has to be no empty spaces in the words.txt file*/  
-
 public class Search{
 //grid of letters.  Will fill with rows and columns after I find the dimensions
 		static char[][] grid;
