@@ -19,18 +19,26 @@ public class IGNAPI{
 
 	public static JSONObject parseJSON(String url) throws IOException, JSONException{
 	  InputStream is = new URL(url).openStream();
-	  try {
 	  BufferedReader link = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
       String object = getURL(link);
       JSONObject obj = new JSONObject(object);
 
       //Can now get items within data.
       JSONArray array = obj.getJSONArray("data");
-      System.out.println(array);
-      return obj;
-  } finally {
+
+      for(int i=0; i < array.length(); i++){
+      	String articleDescription;
+      	String videoDescription;
+
+      	JSONObject info = array.getJSONObject(i).getJSONObject("metadata");
+
+      	if(info.has("headline")){
+      		articleDescription = info.getString("headline");
+      		System.out.println(articleDescription);
+      	}
+      }
   	is.close();
-  }
+    return obj;
 }
 
     public static void main(String[] args) throws IOException, JSONException{
