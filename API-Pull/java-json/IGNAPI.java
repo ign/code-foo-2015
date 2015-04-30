@@ -48,6 +48,7 @@ public class IGNAPI{
   	is.close();
 }
 
+//MAIN//
     public static void main(String[] args) throws IOException, JSONException{
     	parseJSON("http://ign-apis.herokuapp.com/videos");
         parseJSON("http://ign-apis.herokuapp.com/articles");
