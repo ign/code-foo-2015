@@ -23,6 +23,10 @@ public class IGNAPI{
 	  BufferedReader link = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
       String object = getURL(link);
       JSONObject obj = new JSONObject(object);
+
+      //Can now get items within data.
+      JSONArray array = obj.getJSONArray("data");
+      System.out.println(array);
       return obj;
   } finally {
   	is.close();
@@ -34,6 +38,6 @@ public class IGNAPI{
     	//System.out.println("------------------------------------------------------------");
         JSONObject obj = parseJSON("http://ign-apis.herokuapp.com/articles");
         //System.out.println(obj.toString());
-        System.out.println(obj.get("data"));
+        //System.out.println(obj.get("data"));
     }
 }
