@@ -22,11 +22,12 @@ public class IGNAPI{
 	  BufferedReader link = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
       String object = getURL(link);
       JSONObject obj = new JSONObject(object);
-        System.out.println(obj);
+      int lengthOfObj = obj.getJSONArray("data").length();
+        System.out.println(lengthOfObj);
     }
 
     public static void main(String[] args) throws IOException, JSONException{
-    	//parseJSON("http://ign-apis.herokuapp.com/videos");
+    	parseJSON("http://ign-apis.herokuapp.com/videos");
     	//System.out.println("------------------------------------------------------------");
         parseJSON("http://ign-apis.herokuapp.com/articles");
     }
