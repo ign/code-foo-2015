@@ -1,15 +1,25 @@
 Gonna take a break from the coding problems and answer this thing.  
 
-So, "How many ping pong balls would it take to fill a 747 airplane?" So I guess the first step would be to measure the dimensions of the plane as well as the dimensions of a ping pong ball.  
+So, "How many ping pong balls would it take to fill a 747 airplane?" So I guess the first step would be to measure the 
+dimensions of the plane as well as the dimensions of a ping pong ball.  
 
 1) Measurement of ping pong ball:	
-	The standard diameter of a ping pong ball is 40mm, or 0.04m (Science has caused me to only rely on the metric system). So the volume of the ball ((4/3)pi(r)^3), where r is the radius, would be about 3.35m * 10^-5.  Great.
+	The standard diameter of a ping pong ball is 40mm, or 0.04m (Science has caused me to only rely on the metric system). 
+	So the volume of the ball ((4/3)pi(r)^3), where r is the radius, would be about 3.35m * 10^-5.  Great.
 
-2) Measurement of Boeing 747-400F (I figure we're trying to smuggle the most ping pong balls so I went for the 400F which is designed to carry goods and not passengers)
-	Found this pdf file: http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf. The website looks pretty legit, so I'll trust it.  According to this, the total capacity for carrying goods is about 881.15m^3.  Because I'm just 
+2) Measurement of Boeing 747-400F (I figure we're trying to smuggle the most ping pong balls so I went for the 400F which 
+is designed to carry goods and not passengers)
+	Found this pdf file: http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf. The website looks pretty 
+	legit, so I'll trust it.  According to this, the total capacity for carrying goods is about 881.15m^3.  Because I'm 
+	just 
 
-3) Keep in mind that there's probably more room for ping pong balls than allowed by the volumes on that site.  This is probably because a freight plane has its storage in storage boxes, so there's probably a good 1/4 of the space occupied by open air.  I'll give a rough estimate to about 1100m^3.  The question doesn't really mention whether or not the plane has to fly, so I'm packing it full.  
+3) Keep in mind that there's probably more room for ping pong balls than allowed by the volumes on that site.  This is 
+probably because a freight plane has its storage in storage boxes, so there's probably a good 1/4 of the space occupied by 
+open air.  I'll give a rough estimate to about 1100m^3.  The question doesn't really mention whether or not the plane has 
+to fly, so I'm packing it full.  
 
-4) I don't know much about sphere packing and finding the most efficient way to pack ping pong balls, but hey, at least I know that sphere packing exists right?
+4) I don't know much about sphere packing and finding the most efficient way to pack ping pong balls, but hey, at least I 
+know that sphere packing exists right?
 
-5) -drum roll- by dividing 1100m^3 by .0000335m^3, you would gettttttttttt.....about 32 million ping pong balls (my answer was actually 32,835,820.9.) 
+5) -drum roll- by dividing 1100m^3 by .0000335m^3, you would gettttttttttt.....about 32 million ping pong balls (my answer 
+was actually 32,835,820.9.) 
