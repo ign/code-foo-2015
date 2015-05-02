@@ -10,16 +10,15 @@ dimensions of the plane as well as the dimensions of a ping pong ball.
 2) Measurement of Boeing 747-400F (I figure we're trying to smuggle the most ping pong balls so I went for the 400F which 
 is designed to carry goods and not passengers)
 	Found this pdf file: http://www.cargolux.com/ftp/press/Brochures/pdfs/Boeing_747-400F.pdf. The website looks pretty 
-	legit, so I'll trust it.  According to this, the total capacity for carrying goods is about 881.15m^3.  Because I'm 
-	just 
+	legit, so I'll trust it.  According to this, the total capacity for carrying goods is about 765.5m^3. 
 
 3) Keep in mind that there's probably more room for ping pong balls than allowed by the volumes on that site.  This is 
 probably because a freight plane has its storage in storage boxes, so there's probably a good 1/4 of the space occupied by 
-open air.  I'll give a rough estimate to about 1100m^3.  The question doesn't really mention whether or not the plane has 
+open air.  I'll give a rough estimate to about 1000m^3.  The question doesn't really mention whether or not the plane has 
 to fly, so I'm packing it full.  
 
 4) I don't know much about sphere packing and finding the most efficient way to pack ping pong balls, but hey, at least I 
 know that sphere packing exists right?
 
-5) -drum roll- by dividing 1100m^3 by .0000335m^3, you would gettttttttttt.....about 32 million ping pong balls (my answer 
-was actually 32,835,820.9.) 
+5) -drum roll- by dividing 1000m^3 by .0000335m^3, you would gettttttttttt.....about 30 million ping pong balls (my answer 
+was actually 29,850,746.2.) 
