@@ -13,9 +13,8 @@ is designed to carry goods and not passengers)
 	legit, so I'll trust it.  According to this, the total capacity for carrying goods is about 765.5m^3. 
 
 3) Keep in mind that there's probably more room for ping pong balls than allowed by the volumes on that site.  This is 
-probably because a freight plane has its storage in storage boxes, so there's probably a good 1/4 of the space occupied by 
-open air.  I'll give a rough estimate to about 1000m^3.  The question doesn't really mention whether or not the plane has 
-to fly, so I'm packing it full.  
+probably because a freight plane has its storage volume measured by storage boxes, so there's probably a good 1/4 of the space occupied by 
+open air if the ping pong balls were placed on their own without the boxes.  I'll give a rough estimate to about 1000m^3.  The question doesn't really mention whether or not the plane has to fly, so I'm packing it full.  
 
 4) I don't know much about sphere packing and finding the most efficient way to pack ping pong balls, but hey, at least I 
 know that sphere packing exists right?
