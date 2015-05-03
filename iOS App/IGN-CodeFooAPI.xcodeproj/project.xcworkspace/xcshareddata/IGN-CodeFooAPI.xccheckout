@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F287A92-C0BF-4461-BF97-2DE2A019BC79</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IGN-CodeFooAPI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0485519-8C62-4CC8-8AB3-37D2D75E4BBA</key>
+		<string>https://github.com/KChan440/code-foo-2015</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS App/IGN-CodeFooAPI.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0485519-8C62-4CC8-8AB3-37D2D75E4BBA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KChan440/code-foo-2015</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0485519-8C62-4CC8-8AB3-37D2D75E4BBA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0485519-8C62-4CC8-8AB3-37D2D75E4BBA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>code-foo-2015</string>
+		</dict>
+	</array>
+</dict>
+</plist>
